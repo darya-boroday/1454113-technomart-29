@@ -1,0 +1,259 @@
+/*Varibles*/
+:root {
+  --basic-white: #FFFFFF;
+  --basic-extra-dark: #293449;
+  --basic-dark: #32425C;
+  --basic-light-blue: #F1F5F7;
+  --basic-light-pink: #F9F5F0;
+  --basic-black: #000000;
+  --basic-red: #EE3643;
+  --basic-yellow: #FFD180;
+  --basic-green: #63A63E;
+  --basic-grey: #A9A9A9;
+  --basic-yellow-extra: #FFBF47;
+  --basic-blue-extra: #3BBCE3;
+  --basic-purple-extra: #DC91D8;
+  --basic-green-extra: #8ED78F;
+  --basic-white-extra: #F3F7F9;
+}
+
+/*Global*/
+.page body{
+  min-width: 1200px;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+
+}
+.page img{
+  max-width: 100%;
+  height: auto;
+}
+
+.page a{
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
+.link-button {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/*header*/
+.upper-header{
+  font-size: 18px;
+  line-height: 24px;
+  background-color: var(--basic-extra-dark);
+}
+
+.down-header{
+  background-color: var(--basic-light-blue);
+}
+
+.header-contacts .phone-header {
+  font-family: 'Cuprum';
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+}
+
+.header-contacts p {
+  font-family: 'Cuprum';
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-dark);
+}
+
+.main-nav {
+  font-family: 'Cuprum';
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--basic-extra-dark);
+}
+
+.site-nav{
+  list-style: none;
+}
+
+.features .features-title{
+  font-family: 'Cuprum';
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+  align-items: center;
+}
+
+/*features*/
+.features .features-materials,
+.features .features-delivery{
+  background-color: var(--basic-yellow-extra);
+}
+
+.features .features-instruments{
+  background-color: var(--basic-blue-extra);
+}
+
+.features .features-technics{
+  background-color: var(--basic-purple-extra);
+}
+
+.features .features-discounts{
+  background-color: var(--basic-green-extra);
+}
+
+.features .link {
+  font-family: 'Cuprum';
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/*popular-products*/
+.products-producers h2 {
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  background-color: var(--basic-light-pink);
+}
+
+.products-list h3 {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.products-item p {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-grey);
+  text-decoration-line: line-through;
+}
+
+/*service*/
+.services{
+  background-color: var(--basic-light-blue);
+}
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services p,
+.service-list p {
+  font-family: 'PT Sans';
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.services .service-slaider{
+  color: var(--basic-dark);
+}
+
+.service-item {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  color: var(--basic-dark)
+}
+
+.services-list {
+  list-style: none;
+}
+
+/*company-review*/
+.company-review {
+  background-color: var(--basic-white);
+}
+
+.company-review h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.company-review p {
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.company-info .company-list {
+  list-style: line;
+}
+
+.company-list .company-item {
+  font-family: 'Cuprum';
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/*footer*/
+.upper-footer {
+  background-color: var(--basic-dark);
+}
+
+.footer-nav-list,
+.footer-extra-nav{
+  list-style: none;
+}
+
+.footer-nav-item  a{
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-light-blue);
+}
+
+.extra-nav a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-yellow);
+}
+
+.upper-footer p,
+.upper-footer .phone-footer {
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white-extra);
+}
+
+.down-footer{
+  background-color: var(--basic-extra-dark);
+}
+
+.down-footer p {
+  font-family: 'Cuprum';
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.down-footer .link-feedback,
+.down-footer .made-by{
+  color: var(--basic-yellow);
+}
