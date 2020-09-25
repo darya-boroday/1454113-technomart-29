@@ -61,15 +61,43 @@
   background-color: var(--basic-super-red);
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 /*header*/
+
+.main-header {
+  margin-bottom: 70px;
+}
+
+.main-header-bar {
+  background-color: var(--basic-extra-dark);
+}
 .upper-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
   font-size: 18px;
   line-height: 24px;
-  background-color: var(--basic-extra-dark);
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .down-header {
+  display: grid;
+  grid-template-columns: 4fr 4fr 2fr 2fr;
   background-color: var(--basic-light-blue);
+
 }
 
 .header-contacts .phone-header {
@@ -155,7 +183,27 @@
   color: var(--basic-super-grey);
 }
 
+/* Container */
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 /*features*/
+.features-column{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.features-perforators {
+  grid-column:1/3;
+  grid-row:2/4;
+  z-index: 5;
+}
+
 .features .features-title {
   font-family: 'Cuprum', Arial, sans-serif;
   font-weight: bold;
@@ -163,6 +211,7 @@
   line-height: 30px;
   color: var(--basic-white);
   align-items: center;
+
 }
 
 .features .features-materials,
@@ -207,6 +256,28 @@
 }
 
 /*popular-products*/
+
+.products-producers {
+  display: grid;
+}
+
+.column-products ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+.products-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.column-producers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
 .products-producers h2 {
   font-family: 'Cuprum', Arial, sans-serif;
   font-weight: normal;
@@ -216,6 +287,7 @@
   text-transform: uppercase;
   color: var(--basic-dark);
   background-color: var(--basic-light-pink);
+
 }
 
 .products-list h3 {
@@ -286,33 +358,25 @@
   color: var(--basic-dark);
 }
 
-/*produces*/
-.produces .producer-pic:link {
-  background: rgba(0, 0, 0, 0.0001);
-}
-
-.produces .producer-pic:hover {
-  background: var(--basic-white);
-  border: 1px solid #EAEAEA;
-}
-
-.produces .producer-pic:active {
-  background: var(--basic-white);
-  border: 1px solid #EAEAEA;
-}
-
 /*company-review*/
-.company-review {
+.index-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 70px;
+}
+
+.company-info {
   background-color: var(--basic-white);
 }
 
-.company-review h2 {
+.company-info h2,
+.contacts h2 {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.company-review p {
+.company-info p {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -329,6 +393,7 @@
 }
 
 /*footer*/
+
 .upper-footer {
   background-color: var(--basic-dark);
 }
@@ -375,6 +440,8 @@
 }
 
 .down-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   background-color: var(--basic-extra-dark);
 }
 
@@ -385,7 +452,16 @@
   line-height: 18px;
   color: var(--basic-white);
 }
+.footer-socil{
+  width: 145px;
+  justify-self: center;
+}
+.mady-by{
+  max-width: 150px;
+  margin: 0;
+  justify-self: end;
 
+}
 .down-footer .link-feedback,
 .down-footer .made-by {
   color: var(--basic-yellow);
