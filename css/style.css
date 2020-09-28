@@ -45,21 +45,7 @@
   color: var(--basic-white);
 }
 
-.link-button {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--basic-red);
-}
 
-.link-button:hover {
-  background-color: var(--basic-dark-red);
-}
-
-.link-button:active {
-  background-color: var(--basic-super-red);
-}
 
 /* Grid */
 
@@ -77,7 +63,7 @@
 /*header*/
 
 .main-header {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .main-header-bar {
@@ -92,11 +78,35 @@
   margin: 0 auto;
   padding: 0 10px;
 }
+.main-header .container {
+  background-color: var(--basic-light-blue);
+  margin-bottom: 51px;
+  height: 320px;
+  width: 940px;
+  padding: 0;
+}
 
 .down-header {
   display: grid;
   grid-template-columns: 4fr 4fr 2fr 2fr;
   background-color: var(--basic-light-blue);
+
+}
+
+.slogan{
+  width: 197px;
+  height: 71px;
+  margin-left: 160px;
+  margin-top: 38px;
+  margin-right: 39px;
+  margin-bottom: 55px;
+}
+
+.slogan p{
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
 
 }
 
@@ -114,6 +124,7 @@
   line-height: 24px;
   color: var(--basic-dark);
 }
+
 
 .upper-header .oder {
   font-family: 'Cuprum', Arial, sans-serif;
@@ -147,9 +158,20 @@
   background-color: var(--basic-extra-black);
 }
 
-.site-nav {
+/*flex*/
+.site-nav{
+  display: inline-block;
+  display: flex;
+  justify-content: space-around;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  width: 940px;
+  align-items: center;
+
 }
+
 
 .main-nav {
   font-family: 'Cuprum', Arial, sans-serif;
@@ -191,7 +213,7 @@
   padding: 0 10px;
 }
 
-/*features*/
+/*features - GRID*/
 .features-column{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -203,6 +225,8 @@
   grid-row:2/4;
   z-index: 5;
 }
+
+/*features*/
 
 .features .features-title {
   font-family: 'Cuprum', Arial, sans-serif;
@@ -217,6 +241,8 @@
 .features .features-materials,
 .features .features-delivery {
   background-color: var(--basic-yellow-extra);
+  width: 300px;
+  height: 123px;
 }
 
 .features .features-instruments {
@@ -225,10 +251,14 @@
 
 .features .features-technics {
   background-color: var(--basic-purple-extra);
+  width: 300px;
+  height: 123px;
 }
 
 .features .features-discounts {
   background-color: var(--basic-green-extra);
+  width: 300px;
+  height: 123px;
 }
 
 .features a {
@@ -278,6 +308,43 @@
   column-gap: 20px;
 }
 
+/*products flex*/
+.popular-products .container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  height: 90px;
+  background-color: var(--basic-light-pink);
+  align-items: center;
+}
+
+
+.link-button {
+  font-size: 14px;
+  line-height: 18px;
+  height: 38px;
+  width: 192px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+
+}
+.link-button a{
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  padding: 11px  24px 9px;
+  align-items: center;
+}
+.link-button:hover {
+  background-color: var(--basic-dark-red);
+}
+
+.link-button:active {
+  background-color: var(--basic-super-red);
+}
+
 .products-producers h2 {
   font-family: 'Cuprum', Arial, sans-serif;
   font-weight: normal;
@@ -286,8 +353,6 @@
   align-items: center;
   text-transform: uppercase;
   color: var(--basic-dark);
-  background-color: var(--basic-light-pink);
-
 }
 
 .products-list h3 {
@@ -305,6 +370,23 @@
   text-transform: uppercase;
   color: var(--basic-grey);
   text-decoration-line: line-through;
+}
+/*producers flex*/
+
+.producers .container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  height: 90px;
+  background-color: var(--basic-light-pink);
+  align-items: center;
+}
+
+.producers .link {
+  display: inline-block;
+  list-style: none;
+  padding: 11px 38px 9px;
 }
 
 .producers img:hover{
@@ -376,15 +458,13 @@
   text-transform: uppercase;
 }
 
-.company-info p {
+.company-info p,
+.contacts p {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
 
-.company-info .company-list {
-  list-style: line;
-}
 
 .company-list .company-item {
   font-family: 'Cuprum', Arial, sans-serif;
@@ -393,16 +473,43 @@
 }
 
 /*footer*/
+/*Добавила флексы*/
+
 
 .upper-footer {
   background-color: var(--basic-dark);
 }
 
-.footer-nav-list,
-.footer-extra-nav {
+
+.upper-footer .container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 940px;
+  height: 220px;
+}
+
+
+.footer-nav-list{
+  display:inline-block;
+  display: flex;
+  justify-content: space-around;
   list-style: none;
 }
 
+.footer-extra-nav{
+  order:3;
+  display:inline-block;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.contacts-footer {
+  order:2;
+}
+
+
+/*стилизация футера*/
 .footer-nav-item a {
   font-size: 18px;
   line-height: 24px;
@@ -439,10 +546,14 @@
   color: var(--basic-white-extra);
 }
 
-.down-footer {
+/*down footer-grid*/
+.down-footer{
+  background-color: var(--basic-extra-dark);
+}
+.down-footer .container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  background-color: var(--basic-extra-dark);
+
 }
 
 .down-footer p {
@@ -452,7 +563,7 @@
   line-height: 18px;
   color: var(--basic-white);
 }
-.footer-socil{
+.footer-social{
   width: 145px;
   justify-self: center;
 }
@@ -508,6 +619,46 @@
   margin-top:40px;
   margin-bottom: 40px;
 }
+
+/*flex*/
+.perforators-list {
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 48px;
+  list-style: none;
+}
+.perforators-item{
+
+  width: 220px;
+  min-height: 318px;
+  margin-right: 20px;
+  margin-bottom: 18px;
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 255, 0.7);
+}
+.perforators img{
+  width: 144px;
+  height: 128px;
+  margin: 0;
+
+}
+
+.perforators-list h3{
+  margin-right: 17px;
+  margin-left: 18px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.perforators-item:nth-child(3n) {
+  margin-right: 0;
+}
+
 /*CATALOG*/
 .catalog-nav,
 .perforators-list,
