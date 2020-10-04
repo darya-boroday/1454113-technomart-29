@@ -12,8 +12,8 @@
 
 <body class="page-body">
   <header class="main-header">
-    <div class="main-header-bar">
-      <div class="upper-header">
+    <div class="upper-header">
+      <div class="main-header-wrapper">
         <div class="main-logo">
           <a><img src="img/logo.png" width="220" height="47" alt="Логотип магазина «Техномарт»"></a>
         </div>
@@ -22,10 +22,12 @@
         </form>
         <a class="marks" href="#">Закладки</a>
         <a class="basket" href="#">Корзина</a>
-        <button class="oder" type="button">Оформить заказ</button>
+        <div class="order">
+          <a class="link-order" href="#">Оформить заказ</a>
+        </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container-index">
       <div class="down-header">
         <div class="slogan">
           <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -37,6 +39,8 @@
         </section>
         <div class="user-navigation">
           <a class="login-link" href="blank.html">Войти</a>
+        </div>
+        <div class="user-registration">
           <a class="registration-link" href="blank.html">Регистрация</a>
         </div>
       </div>
@@ -214,8 +218,8 @@
     <div class="index-columns">
       <section class="company-info">
         <h2>КОМПАНИЯ "ТЕХНОМАРТ"</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Оргомный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.<br>
-          Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
+        <p>Настоящий мужской шоппинг начинается здесь! Оргомный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</p>
+        <p class="info-paragraph">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
         <ul class="company-list">
           <li class="company-item">Деловые линии</li>
           <li class="company-item">Автотрейдинг</li>
@@ -231,7 +235,7 @@
         </p>
         <a href="https://www.google.com/maps/"> <img src="img/map.png" width="300" height="158" alt="Карта"></a>
         <div class="link-button">
-          <a href="blank.html">Заблудились? Напишите нам!</a>
+          <a class="map" href="blank.html">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </div>
