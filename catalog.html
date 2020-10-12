@@ -345,12 +345,14 @@
     <button type="button">Добавить</button>
     <button type="button">Закрыть</button>
   </section>
-  <section>
-    <h2>Добавить товар в корзину</h2>
-    <p>Добавить товар в корзину?</p>
-    <!-- Здесь будет форма логина -->
-    <button type="button">Добавить</button>
-    <button type="button">Закрыть</button>
+  <section class="modal modal-basket">
+    <h2 class="visually-hidden">Добавить товар в корзину</h2>
+    <p>Товар добавлен в корзину!</p>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <div class="button-basket">
+      <a class="add" href="#">Оформить заказ</a>
+      <a class="next" href="#">Продолжить покупки</a>
+    </div>
   </section>
 </body>
 
