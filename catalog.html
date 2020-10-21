@@ -6,6 +6,7 @@
   <title>HTML Academy: Техномарт-каталог</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&display=swap" rel="stylesheet">
   <link href="normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +19,9 @@
           <a><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина «Техномарт»"></a>
         </div>
         <form class="search" action="#" method="POST">
-          <input type="search" placeholder="Поиск:">
+          <div class="search-pic">
+            <input type="search" name="search" id="search" value="Поиск:">
+          </div>
         </form>
         <div class="bookmarks">
           <a class="marks" href="#">Закладки: 0</a>
@@ -30,7 +33,7 @@
     <div class="container-index">
       <div class="down-header">
         <div class="slogan slogan-footer">
-          <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+          <p>Интернет-магазин строительных материалов <br>и инструментов для ремонта</p>
         </div>
         <section class="header-contacts catalog-contacts">
           <h2 class="visually-hidden">Контактная информация</h2>
@@ -85,9 +88,21 @@
       </li>
     </ul>
     <h1>Перфораторы</h1>
+    <div class="sort">
+      <p>Сортировка:</p>
+      <ul>
+        <li>по цене
+        </li>
+        <li>
+          по типу
+        </li>
+        <li>
+          По функционалу
+        </li>
+      </ul>
+    </div>
     <section class="filter">
-      <h2>Фильтр:</h2>
-      <!-- Здесь будет форма фильтра -->
+      <h2>Фильтр</h2>
       <form method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-item">
           <legend>Цена:</legend>
@@ -109,8 +124,50 @@
             </div>
           </div>
         </fieldset>
-
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="producers">
+            <legend>Производители:</legend>
+            <ul>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked readonly>
+                <label for="filter-bosch">BOSCH</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox-1 filter-input" type="checkbox" name="interscol" id="filter-interscol">
+                <label for="filter-interscol">ИНТЕРСКОЛ</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked readonly>
+                <label for="filter-makita">MAKIta</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox-1 filter-input" type="checkbox" name="dewalt" id="dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox-1 filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="energy">
+            <legend>Питание:</legend>
+            <ul>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="battery" id="filter-battery" checked>
+                <label for="filter-battery">Аккумуляторные</label>
+              </li>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="net" id="filter-net">
+                <label for="filter-net">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="filter-button button">Показать</button>
+        </form>
     </section>
+
     <section class="catalog">
       <h2 class="visually-hidden">Список префораторов</h2>
       <ul class="perforators-list">
@@ -320,21 +377,14 @@
         </div>
       </div>
   </footer>
-  <section>
+  <section class="visually-hidden">
     <h2>Личный кабинет</h2>
     <p>Введите пожалуйста свой логин и пароль</p>
     <!-- Здесь будет форма логина -->
     <button type="button">Войти</button>
     <button type="button">Закрыть</button>
   </section>
-  <section>
-    <h2>Добавить товар в закладки</h2>
-    <p>Добавить товар в закладки?</p>
-    <!-- Здесь будет форма логина -->
-    <button type="button">Добавить</button>
-    <button type="button">Закрыть</button>
-  </section>
-  <section class="modal modal-basket">
+  <section class="modal modal-basket visually-hidden">
     <h2 class="visually-hidden">Добавить товар в корзину</h2>
     <p>Товар добавлен в корзину!</p>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>

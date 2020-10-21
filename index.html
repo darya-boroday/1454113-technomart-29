@@ -6,6 +6,7 @@
   <title>HTML Academy: Техномарт</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,7 +18,9 @@
           <a><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина «Техномарт»"></a>
         </div>
         <form class="search" action="#" method="POST">
-          <input type="search" placeholder="Поиск:">
+          <div class="search-pic">
+            <input type="search" name="search" id="search" value="Поиск:">
+          </div>
         </form>
         <div class="bookmarks">
           <a class="marks" href="#">Закладки: 0</a>
@@ -86,10 +89,10 @@
         <section class="slider slider-2">
           <h3 class="visually-hidden">ПЕРФОРАТОРЫ</h3>
           <ul class="slider-list">
-            <li class="slider-item slide slide-current">
+            <li class="slider slider-item slide slide-current">
               <a class="slider-catalog active" href="#">Открыть каталог</a>
             </li>
-            <li class="slider-item slide">
+            <li class="slider-2 slider-item slide">
               <a class="slider-catalog" href="#">Открыть каталог</a>
             </li>
           </ul>
@@ -251,7 +254,7 @@
         <section class="contacts-footer">
           <h2 class="visually-hidden">Контактная информация</h2>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <a class="phone-footer" href="tel:+78125550555">+7(812)555-05-55</a>
+          <a class="phone-footer" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </section>
         <ul class="footer-nav-list">
           <li class="footer-nav-item">
@@ -295,7 +298,7 @@
             <li>
               <a class="social-item" href="#">
                 <span class="visually-hidden">Вконтакте</span>
-                <svg width="27" height="16" viewBox="0 0 27 16" fill="none""><path d=" M16.138 12.51C17.094 12.201 18.318 14.55 19.621 15.449C20.599 16.13 21.348 15.983 21.348 15.983L24.821 15.933C24.821 15.933 26.636 15.821 25.778 14.379C25.707
+                <svg width="27" height="16" viewBox="0 0 27 16" fill="none""><path d = " M16.138 12.51C17.094 12.201 18.318 14.55 19.621 15.449C20.599 16.13 21.348 15.983 21.348 15.983L24.821 15.933C24.821 15.933 26.636 15.821 25.778 14.379C25.707
                   14.259 25.275 13.31 23.193 11.357C21.016 9.31398 21.311 9.64498 23.932 6.11298C25.529 3.95998 26.168 2.64498 25.968 2.08498C25.776 1.54598 24.603 1.68598 24.603 1.68598L20.69 1.71298C20.309 1.71398 19.986 1.83198 19.839
                   2.22798C19.836 2.23198 19.218 3.89398 18.394 5.30698C16.653 8.29598 15.958 8.45498 15.67 8.26798C15.009 7.83498 15.176 6.53098 15.176 5.60398C15.176 2.70698 15.608 1.49898 14.33 1.18698C13.903 1.08298 13.591 1.01498 12.502
                   1.00498C11.11 0.983976 9.928 1.00498 9.258 1.33398C8.813 1.55698 8.472 2.04598 8.679 2.07398C8.939 2.10898 9.522 2.23398 9.834 2.65998C10.235 3.21198 10.223 4.44898 10.223 4.44898C10.223 4.44898 10.452 7.85998 9.683 8.28298C9.155
@@ -338,44 +341,20 @@
       </div>
     </div>
   </footer>
-  <section>
-    <h2>Личный кабинет</h2>
-    <p>Введите пожалуйста свой логин и пароль</p>
-    <!-- Здесь будет форма логина -->
-    <button type="button">Войти</button>
-    <button type="button">Закрыть</button>
-  </section>
-  <section>
-    <h2>Регистрация</h2>
-    <p>Быстро и легко</p>
-    <!-- Здесь будет форма логина -->
-    <button type="button">Регистрация</button>
-    <button type="button">Закрыть</button>
-  </section>
-  <section>
-    <h2>Заблудились?</h2>
-    <p>Оставьте контактную информацию - и мы сами Вас найдем!</p>
-    <!-- Здесь будет форма логина -->
+
+  <section class="modal modal-contacts">
+    <h2 class="visually-hidden">Заблудились?</h2>
+
     <button type="button">Отправить</button>
     <button type="button">Закрыть</button>
   </section>
-  <section class="modal modal-map">
+  <section class="modal modal-map visually-hidden">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
       width="943" height="499" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
-  <section>
-    <h2>Добавить товар в закладки</h2>
-    <p>Добавить товар в закладки?</p>
-    <!-- Здесь будет форма логина -->
-    <button type="button">Добавить</button>
-    <button type="button">Закрыть</button>
-  </section>
-
-
-
 </body>
 
 </html>
