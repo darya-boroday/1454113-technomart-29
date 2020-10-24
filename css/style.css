@@ -58,6 +58,10 @@
   color: var(--basic-white);
 }
 
+.page button:focus{
+  outline: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -548,7 +552,7 @@
 .container .slider {
   grid-column: 1/3;
   grid-row: 2/4;
-  z-index: 5;
+
 }
 
 /*features*/
@@ -711,7 +715,7 @@
   position: 0 0;
 }
 
-.slider {
+ .slider-1 {
   background-image: url("../img/perforators_slider(1).jpg");
   width: 620px;
 }
@@ -807,7 +811,7 @@
   margin: 0px;
 }
 
-.products-list {
+.products {
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -868,6 +872,9 @@
   background-color: var(--basic-super-red);
 }
 
+.products-pic-none{
+  display: none;
+}
 /*products-decoration*/
 .products-producers h2 {
   font-family: 'Cuprum', Arial, sans-serif;
@@ -882,7 +889,7 @@
   margin-left: 28px;
 }
 
-.products-list h3 {
+.products h3 {
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -1086,8 +1093,13 @@
   text-transform: uppercase;
   color: var(--basic-black);
   font-weight: normal;
-  padding-top: 64px;
   margin: 0px;
+  margin-top:67px;
+}
+
+.services .service-title-info{
+  margin-top: 0px;
+  padding-top: 65px;
 }
 
 .services p {
@@ -1224,7 +1236,7 @@
   border-radius: 2px;
 }
 
-.slider-controls-services button {
+.slider-controls-services .button {
   display: block;
   width: 240px;
   font-family: 'Cuprum', Arial, sans-serif;
@@ -1245,22 +1257,33 @@
   display: none;
 }
 
-.slider-services .slide-current {
+.slide-info-current {
   display: block;
 }
 
-.slider-controls-services .current {
+ .current-info-btn {
+  display: block;
+  font-family: 'Cuprum', Arial, sans-serif;
   background-color: var(--basic-white);
   color: var(--basic-dark);
   box-shadow: 0px 1px 0px #FFFFFF;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  border: none;
+  letter-spacing: 0.5px;
+  width: 240px;
 }
 
 /*company-review*/
 .index-columns {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 69px;
-  margin-top: 70px;
+  margin-bottom: 68px;
+  margin-top: 69px;
 }
 
 .company-info {
@@ -1848,7 +1871,7 @@
   user-select: none;
 }
 /*квадратный чебоксы вставить галочки**/
-.filter-input-checkbox-1+label::before {
+.filter-input-checkbox+label::before {
   content: "";
   position: absolute;
   left: -35px;
@@ -1859,7 +1882,7 @@
   border-radius: 10%;
 }
 
-.filter-input-checkbox-1+label:hover::before {
+.filter-input-checkbox+label:hover::before {
   content: "";
   position: absolute;
   left: -35px;
@@ -1869,7 +1892,7 @@
   border: 2px solid var(--filter-grey);
   border-radius: 10%;
 }
-.filter-input-checkbox-1+label:active::before {
+.filter-input-checkbox+label:active::before {
   content: "";
   position: absolute;
   left: -35px;
@@ -1880,27 +1903,28 @@
   opacity:0.5;
 }
 
-.filter-input-checkbox:checked+label::before {
+.filter-input-checkbox:checked+label::after {
   content: "";
   display: block;
   position: absolute;
-  left: -35px;
-  top: 0;
-  width: 27px;
-  height: 23px;
-  background-image: url("../img/icons/checkbox-on.svg");
+  left: -30px;
+  top: 1px;
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/icons/click.svg");
+  background-repeat: no-repeat;
   border-radius: 10%;
 }
 
-.filter-input-checkbox:checked+label:hover::before {
+.filter-input-checkbox:checked+label:hover::after {
   content: "";
   display: block;
   position: absolute;
-  left: -35px;
-  top: 0;
-  width: 27px;
-  height: 23px;
-  background-image: url("../img/icons/checkbox-hover.svg");
+  left: -30px;
+  top: 1px;
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/icons/click.svg");
   border-radius: 10%;
 }
 /* круглые чебоксы вставить галочки**/
@@ -2584,6 +2608,7 @@ h1 {
 /* MODAL*/
 /*modal-map*/
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -2594,6 +2619,20 @@ h1 {
   background-color: var(--basic-white);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   border-top: 7px solid var(--basic-red);
+}
+
+.modal--show {
+  display: block;
+}
+
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 /*кнопка закрыть*/
@@ -2629,7 +2668,6 @@ h1 {
 
 /*карта*/
 .modal-map {
-  display: none;
   width: 943px;
   height: 449px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
@@ -2637,7 +2675,7 @@ h1 {
 }
 
 .modal-map img {
-  display: block;
+display: block;
 }
 
 .modal-map iframe {
@@ -2646,11 +2684,76 @@ h1 {
 
 /*modal-contacts*/
 .modal-contacts {
-  display: none;
   width: 620px;
   height: 430px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   border-top: 7px solid var(--basic-red);
+}
+
+.modal-contacts form {
+  margin-top: 39px;
+  margin-bottom: 37px;
+  margin-right: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 80px;
+}
+
+.modal-contacts .contacts-item{
+  margin-right: 20px;
+}
+
+.modal-contacts .contacts-item-email{
+  margin-right: 0px;
+}
+
+.modal-contacts label{
+  display: block;
+  margin-bottom: 11px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Cuprum', Arial, sans-serif;
+  color:var(--bacis-black);
+  width: 117px;
+  margin-right: 0px;
+}
+
+.modal-contacts input[type="text"],
+.modal-contacts input[type="email"]{
+  width: 196px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 8px;
+}
+.contacts-item-text{
+  margin-bottom: 37px;
+  margin-top: 13px;
+}
+.modal-contacts textarea{
+  width:446px;
+  height: 114px;
+  padding-left: 12px;
+}
+
+.modal-contacts input,
+.modal-contacts textarea {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-grey);
+}
+
+.contacts-button{
+  width: 460px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  padding-top:11px;
+  padding-bottom: 9px;
+  border: none;
+  text-transform: uppercase;
 }
 /*корзина*/
 .modal-basket {
@@ -2722,4 +2825,49 @@ h1 {
   background-image: url("../img/icons/icon-mark.svg");
   left: -90px;
   top: -20px;
+}
+
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Animations - mistakes */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
