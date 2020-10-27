@@ -112,6 +112,7 @@
 /*header*/
 .upper-header {
   background-color: var(--basic-extra-dark);
+
 }
 
 .main-header-wrapper {
@@ -119,9 +120,11 @@
   flex-wrap: wrap;
   font-size: 18px;
   line-height: 24px;
+  justify-content: flex-end;
+  position: relative;
+  background-color: var(--basic-extra-dark);
   width: 940px;
   margin: 0 auto;
-  justify-content: flex-end;
 }
 
 .main-header {
@@ -133,9 +136,6 @@
   padding-bottom: 63px;
 }
 
-.main-header-wrapper {
-  position: relative;
-}
 
 .main-logo {
   width: 220px;
@@ -535,12 +535,8 @@
   opacity: 0.5;
 }
 
-/* Container */
-.container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0px;
-}
+
+
 
 /*features - GRID*/
 .features-column {
@@ -557,6 +553,9 @@
 
 /*features*/
 .features {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0px;
   margin-top: 57px;
 }
 
@@ -805,6 +804,12 @@
 }
 
 /*products grid*/
+.products-producers{
+  width: 940px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
 .products-item {
   width: 218px;
   min-height: 316px;
@@ -1086,6 +1091,13 @@
   background-color: var(--basic-light-blue);
 }
 
+.services-wrapper{
+  width: 940px;
+  margin: 0 auto;
+  padding: 0px;
+  background-color: var(--basic-light-blue);
+}
+
 .services h2 {
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
@@ -1284,6 +1296,9 @@
   flex-wrap: wrap;
   margin-bottom: 68px;
   margin-top: 69px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0px;
 }
 
 .company-info {
@@ -1292,6 +1307,8 @@
   background-color: var(--basic-white);
   width: 460px;
   margin-right: 166px;
+  margin-bottom: 68px;
+  margin-top: 69px;
 }
 
 .company-info h2,
@@ -1362,7 +1379,10 @@
   background-color: var(--basic-red);
   justify-content: flex-start;
 }
-
+.index-columns .contacts{
+  margin-bottom: 68px;
+  margin-top: 69px;
+}
 .contacts p {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
@@ -1422,6 +1442,8 @@
   display: grid;
   grid-template-columns: 325px 614px;
   width: 940px;
+  margin: 0 auto;
+  padding: 0px;
 }
 
 .footer-nav-list {
@@ -1517,7 +1539,7 @@
 }
 
 .upper-footer p {
-  margin-top: 14px;
+  margin-top: 16px;
   margin-bottom: 0px;
   margin-left: 2px;
 }
@@ -1635,19 +1657,24 @@
 .inner-page .basket{
   padding-right: 21px;
 }
+
+
 /* Grid for catalog */
-.page-catalog {
+.catalog-wrapper {
   display: grid;
   grid-template-columns: 220px 720px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0px;
 }
 
-.page-catalog h1 {
+.catalog-wrapper h1 {
   grid-column: 1 / -1;
   margin-bottom: 18px;
   padding: 0;
 }
 
-.page-catalog .catalog-nav {
+.catalog-wrapper .catalog-nav {
   grid-column: 1 / -1;
   padding: 0;
   margin: 0;
@@ -1768,7 +1795,7 @@
   position: relative;
 }
 
-.sort ul::after {
+.sort li:last-child::after {
   display: block;
   content: '';
   position: absolute;
@@ -1778,7 +1805,7 @@
   border-top: 10px solid var(--basic-super-grey);
 }
 
-.sort ul:hover::after{
+.sort li:last-child:hover::after{
   display: block;
   content: '';
   position: absolute;
@@ -1788,7 +1815,7 @@
   border-top: 10px solid var(--basic-black);
 }
 
-.sort ul:hover::after{
+.sort li:last-child:active::after{
   display: block;
   content: '';
   position: absolute;
@@ -1875,7 +1902,7 @@
   content: "";
   position: absolute;
   left: -35px;
-  top: 0;
+  top: -3px;
   width: 20px;
   height: 20px;
   border: 2px solid var(--basic-super-grey);
@@ -1886,7 +1913,7 @@
   content: "";
   position: absolute;
   left: -35px;
-  top: 0;
+  top: -5px;
   width: 20px;
   height: 20px;
   border: 2px solid var(--filter-grey);
@@ -1896,7 +1923,7 @@
   content: "";
   position: absolute;
   left: -35px;
-  top: 0;
+  top: -5px;
   width: 20px;
   height: 20px;
   border: 2px solid var(--basic-super-grey);
@@ -1908,9 +1935,9 @@
   display: block;
   position: absolute;
   left: -30px;
-  top: 1px;
-  width: 21px;
-  height: 20px;
+  top: -3px;
+  width: 23px;
+  height: 22px;
   background-image: url("../img/icons/click.svg");
   background-repeat: no-repeat;
   border-radius: 10%;
@@ -1921,15 +1948,24 @@
   display: block;
   position: absolute;
   left: -30px;
-  top: 1px;
-  width: 21px;
-  height: 20px;
+  top: -3px;
+  width: 23px;
+  height: 22px;
   background-image: url("../img/icons/click.svg");
   border-radius: 10%;
 }
 /* круглые чебоксы вставить галочки**/
+#filter-interscol + label::before{
+  color: var(--filter-grey);
+  opacity: 0.5;
+}
+#filter-net + label::before{
+  color: var(--filter-grey);
+  opacity: 0.5;
+}
+
 .filter .energy{
-  margin-top: 26px;
+  margin-top: 23px;
   margin-bottom: 19px;
 }
 .filter-input-radio + label::before {
@@ -1937,9 +1973,9 @@
   position: absolute;
   left: -34px;
   top: -1px;
-  width: 18px;
-  height: 18px;
-  border: 3px solid var(--basic-super-grey);
+  width: 17px;
+  height: 17px;
+  border: 4px solid var(--basic-super-grey);
   border-radius: 50%;
 }
 
@@ -1948,9 +1984,9 @@
   position: absolute;
   left: -34px;
   top: -1px;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--filter-grey);
+  width: 17px;
+  height: 17px;
+  border: 4px solid var(--filter-grey);
   border-radius: 50%;
 }
 
@@ -1959,9 +1995,9 @@
   position: absolute;
   left: -34px;
   top: -1px;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--filter-grey);
+  width: 17px;
+  height: 17px;
+  border: 4px solid var(--filter-grey);
   border-radius: 50%;
   opacity:0.5;
 }
@@ -1969,10 +2005,10 @@
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -27px;
-  width: 10px;
-  height: 10px;
+  top: 7px;
+  left: -26px;
+  width: 9px;
+  height: 9px;
   background-color: var(--basic-super-grey);
   border-radius: 50%;
 }
@@ -1980,10 +2016,10 @@
 .filter-input-radio:checked + label:hover::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -27px;
-  width: 10px;
-  height: 10px;
+  top: 7px;
+  left: -26px;
+  width: 9px;
+  height: 9px;
   background-color: var(--filter-grey);
   border-radius: 50%;
 }
@@ -1991,10 +2027,10 @@
 .filter-input-radio:checked + label:active::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -27px;
-  width: 10px;
-  height: 10px;
+  top: 7px;
+  left: -26px;
+  width: 9px;
+  height: 9px;
   background-color: var(--filter-grey);
   border-radius: 50%;
   opacity: 0.5;
@@ -2436,7 +2472,7 @@
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 80%;
   height: 2px;
   background: var(--basic-green);
 }
@@ -2456,7 +2492,11 @@
 }
 
 .range-controls .toggle-max {
-  left: 140px;
+  left: 160px;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
 }
 
 .price-controls {
@@ -2477,9 +2517,9 @@
 }
 
 .price-controls input {
-  width: 95px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  width: 78px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   color: var(--basic-black);
   border: none;
@@ -2487,11 +2527,37 @@
   background: var(--filter-pink);
   font-family: inherit;
   font-size: inherit;
-  padding-left: 0px;
+  padding-left: 17px;
   padding-right: 0px;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+
 }
 
+.max-price input{
+  margin-left: 5px;
+}
+.filter .producers{
+  position: relative;
+}
+
+.filter .producers::after{
+  display: block;
+  position: absolute;
+  content: "";
+  width:220px;
+  height: 1px;
+  background-color: var(--basic-grey);
+}
 /*PERFORETORS_CATALOG*/
+.perforators-info-wrapper{
+  background-color: var(--basic-light-blue);
+  width: 940px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
 .perforators-info,
 h1 {
   background-color: var(--basic-light-blue);
@@ -2519,7 +2585,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   list-style: none;
 }
 
@@ -2560,13 +2626,14 @@ h1 {
   color: var(--basic-white);
 }
 
-.perforators-info h2 {
+.perforators-info-wrapper h2 {
+  display: inline-block;
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
-  margin-top: 64px;
+  margin-top: 66px;
   margin-bottom: 25px;
   font-weight: 400;
 }
@@ -2576,11 +2643,8 @@ h1 {
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
-  margin-bottom: 68px;
-}
-
-.perforators-info {
-  margin-bottom: 0px;
+  padding-bottom: 68px;
+  margin: 0px;
 }
 
 /*КАРТИНКА НОВАЯ ДЛЯ ПЕРФОАТОРОВ*/

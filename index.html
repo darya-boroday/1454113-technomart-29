@@ -17,7 +17,7 @@
         <div class="main-logo">
           <a><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина «Техномарт»"></a>
         </div>
-        <form class="search" action="#" method="POST">
+        <form class="search" action="#" method="POST" target="_blank">
           <div class="search-pic">
             <input type="search" name="search" id="search" value="Поиск:">
           </div>
@@ -89,7 +89,7 @@
         <section class="slider slider-1">
           <h3 class="visually-hidden">ПЕРФОРАТОРЫ</h3>
           <ul class="slider-list">
-            <li class="slider-item slide slide-current">
+            <li class="slider-item slide slider-1 slide-current">
               <a class="slider-catalog active" href="catalog.html">Открыть каталог</a>
             </li>
             <li class=" slider-item slide">
@@ -191,8 +191,10 @@
           </div>
         </div>
       </section>
+    </div>
 
-      <section class="services">
+    <section class="services">
+      <div class="services-wrapper">
         <h2 class="service-title-info">СЕРВИСЫ</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <section class="slider-services">
@@ -217,32 +219,31 @@
             <button class="garantee-btn button" type="button">Гарантия</button>
             <button class="loan-btn button" type="button">Кредит</button>
           </div>
-        </section>
-      </section>
-      <div class="index-columns">
-        <section class="company-info">
-          <h2>КОМПАНИЯ &laquo;Техномарт&raquo;</h2>
-          <p>Настоящий мужской шоппинг начинается здесь! Оргомный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p class="info-paragraph">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
-          <ul class="company-list">
-            <li class="company-item ">Деловые линии</li>
-            <li class="company-item">Автотрейдинг</li>
-            <li class="company-item">ЖелДолЭкспедиция</li>
-          </ul>
-          <a class="link-info active" href="blank.html">Подробнее о компании</a>
-        </section>
-        <section class="contacts">
-          <h2>КОНТАКТЫ</h2>
-          <p>Вы можете забрать товар сами,<br> заехав в наш офис:
-          </p>
-          <div class="contacts-map">
-            <a href="https://www.google.com/maps/">
-              <img src="img/map.png" width="300" height="158" alt="Карта">
-            </a>
-          </div>
-          <button class="active button-contacts">Заблудились? Напишите нам!</button>
-        </section>
       </div>
+    </section>
+    <div class="index-columns">
+      <section class="company-info">
+        <h2>КОМПАНИЯ &laquo;Техномарт&raquo;</h2>
+        <p>Настоящий мужской шоппинг начинается здесь! Оргомный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+        <p class="info-paragraph">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
+        <ul class="company-list">
+          <li class="company-item ">Деловые линии</li>
+          <li class="company-item">Автотрейдинг</li>
+          <li class="company-item">ЖелДолЭкспедиция</li>
+        </ul>
+        <a class="link-info active" href="blank.html">Подробнее о компании</a>
+      </section>
+      <section class="contacts">
+        <h2>КОНТАКТЫ</h2>
+        <p>Вы можете забрать товар сами,<br> заехав в наш офис:
+        </p>
+        <div class="contacts-map">
+          <a href="https://www.google.com/maps/">
+            <img src="img/map.png" width="300" height="158" alt="Карта">
+          </a>
+        </div>
+        <button class="active button-contacts">Заблудились? Напишите нам!</button>
+      </section>
     </div>
   </main>
 
@@ -301,7 +302,7 @@
             <li>
               <a class="social-item" href="#">
                 <span class="visually-hidden">Вконтакте</span>
-                <svg width="27" height="16" viewBox="0 0 27 16" fill="none">
+                <svg role="img" aria-label="Логотип Инстаграм" width="27" height="16" viewBox="0 0 27 16" fill="none">
                   <path d="M16.138 12.51C17.094 12.201 18.318 14.55 19.621 15.449C20.599 16.13 21.348 15.983 21.348 15.983L24.821 15.933C24.821 15.933 26.636 15.821 25.778 14.379C25.707
                   14.259 25.275 13.31 23.193 11.357C21.016 9.31398 21.311 9.64498 23.932 6.11298C25.529 3.95998 26.168 2.64498 25.968 2.08498C25.776 1.54598 24.603 1.68598 24.603 1.68598L20.69 1.71298C20.309 1.71398 19.986 1.83198 19.839
                   2.22798C19.836 2.23198 19.218 3.89398 18.394 5.30698C16.653 8.29598 15.958 8.45498 15.67 8.26798C15.009 7.83498 15.176 6.53098 15.176 5.60398C15.176 2.70698 15.608 1.49898 14.33 1.18698C13.903 1.08298 13.591 1.01498 12.502
@@ -315,7 +316,7 @@
             <li>
               <a class="social-item" href="#">
                 <span class="visually-hidden">Фейсбук</span>
-                <svg width="12" height="22" viewBox="0 0 12 22" fill="none">
+                <svg role="img" aria-label="Логотип Инстаграм" width="12" height="22" viewBox="0 0 12 22" fill="none">
                   <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
                 </svg>
               </a>
@@ -323,7 +324,7 @@
             <li>
               <a class="social-item" href="#">
                 <span class="visually-hidden">Инстаграм</span>
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                <svg role="img" aria-label="Логотип Инстаграм" width="21" height="21" viewBox="0 0 21 21" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
                     fill="white" />
