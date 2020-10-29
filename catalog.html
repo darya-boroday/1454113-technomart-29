@@ -18,15 +18,16 @@
         <div class="main-logo">
           <a href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина «Техномарт»"></a>
         </div>
-        <form class="search" action="#" method="POST" target="_blank">
+        <form class="search" action="#" method="get" target="_blank">
           <div class="search-pic">
             <input type="search" name="search" id="search" value="Поиск:">
           </div>
+          <button class="visually-hidden search-button" type="button" name="button"></button>
         </form>
         <div class="bookmarks">
           <a class="marks" href="#">Закладки: 0</a>
         </div>
-        <a class="basket" href="#">Корзина: 10</a>
+        <a class="basket basket-black" href="#">Корзина: 10</a>
         <a class="link-order" href="#">Оформить заказ</a>
       </div>
     </div>
@@ -125,6 +126,7 @@
               </div>
             </div>
           </fieldset>
+          <button class="visually-hidden" type="button" name="button"></button>
         </form>
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru" target="_blank">
@@ -136,7 +138,7 @@
                 <label for="filter-bosch">BOSCH</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interscol" id="filter-interscol" disabled>
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interscol" id="filter-interscol">
                 <label for="filter-interscol">ИНТЕРСКОЛ</label>
               </li>
               <li class="filter-option filter-checkbox">
@@ -161,7 +163,7 @@
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="net" id="filter-net" disabled>
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="net" id="filter-net">
                 <label for="filter-net">Сетевые</label>
               </li>
             </ul>
@@ -173,7 +175,7 @@
       <section class="catalog">
         <h2 class="visually-hidden">Список префораторов</h2>
         <ul class="perforators-list">
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-1">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <div>
               <img src="img/BFG_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -183,7 +185,7 @@
             </span>
             <a class="button-perf" href="#">25500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-2">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <div>
               <img src="img/BFG_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -193,7 +195,7 @@
             </span>
             <a class="button-perf" href="#">25500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-3">
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <div>
               <img src="img/BFG_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -203,7 +205,7 @@
             </span>
             <a class="button-perf" href="#">15500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class=" perforators-item perforators-item-4">
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <div>
               <img src="img/BFG_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -213,7 +215,7 @@
             </span>
             <a class="button-perf" href="#">15500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-5">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <div>
               <img src="img/BFG_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -223,14 +225,14 @@
             </span>
             <a class="button-perf" href="#">25500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-6">
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <div>
               <img src="img/BFG_3000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
             </div>
             <a class="btn-perf" href="#">12500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-7">
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <div>
               <img src="img/BFG_6000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
@@ -240,7 +242,7 @@
             </span>
             <a class="button-perf" href="#">15500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-8">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <div>
               <img src="img/BFG_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -250,7 +252,7 @@
             </span>
             <a class="button-perf" href="#">25500 Р.</a>
           </li>
-          <li class="perforators-item">
+          <li class="perforators-item perforators-item-9">
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <div>
               <img src="img/BFG_2000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 2000">
@@ -385,15 +387,24 @@
     </div>
   </footer>
 
-  <section class="modal modal-basket">
+  <section class="modal-basket modal">
     <h2 class="visually-hidden">Добавить товар в корзину</h2>
     <p>Товар добавлен в корзину!</p>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
     <div class="button-basket">
       <a class="add" href="#">Оформить заказ</a>
       <a class="next" href="#">Продолжить покупки</a>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+
     </div>
   </section>
+
+  <div class="modalcards visually-hidden">
+    <button class="button-buy" type="button" name="button">Купить</button>
+    <button class="button-bookmark" type="button" name="button">В закладки</button>
+  </div>
+
+  <script src="js/cards.js"></script>
+  <script src="js/basket.js"></script>
 </body>
 
 </html>
