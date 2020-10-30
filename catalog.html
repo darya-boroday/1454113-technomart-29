@@ -7,8 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&display=swap" rel="stylesheet">
-  <link href="normalize.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="ccs/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body inner-page">
@@ -42,7 +42,10 @@
           <p>г. Санкт-Петербург, ул. Б. Конюшенная д. 19/8</p>
         </section>
         <div class="user-nav">
-          <a class="account" href="#"> Равшан Джамшутович</a>
+          <div class="nav-enter">
+            <a class="account" href="#"> Равшан Джамшутович</a>
+            <a class="enter" href="#" aria-label="вход"></a>
+          </div>
           <div class="user-nav-special">
             <a class="orders-1" href="#">Мои заказы</a>
             <a class="log-in" href="#">Личный кабинет</a>
@@ -102,6 +105,8 @@
             По функционалу
           </li>
         </ul>
+        <a href="#" class="trg trg-up" aria-label="вверх"></a>
+        <a href="#" class="trg trg-down" aria-label="вниз"></a>
       </div>
       <section class="filter">
         <h2>Фильтр</h2>
@@ -340,8 +345,7 @@
           <h2 class="visually-hidden">Мы в социальных сетях!</h2>
           <ul class="social-networks">
             <li>
-              <a class="social-item" href="#" aria-label="Вконтакте">
-                <span class="visually-hidden">Вконтакте</span>
+              <a class="social-item" href="#">
                 <svg role="img" aria-label="Логотип Вконтакте" width="27" height="16" viewBox="0 0 27 16" fill="none">
                   <path d="M16.138 12.51C17.094 12.201 18.318 14.55 19.621 15.449C20.599 16.13 21.348 15.983 21.348 15.983L24.821 15.933C24.821 15.933 26.636 15.821 25.778 14.379C25.707
                   14.259 25.275 13.31 23.193 11.357C21.016 9.31398 21.311 9.64498 23.932 6.11298C25.529 3.95998 26.168 2.64498 25.968 2.08498C25.776 1.54598 24.603 1.68598 24.603 1.68598L20.69 1.71298C20.309 1.71398 19.986 1.83198 19.839
@@ -354,16 +358,14 @@
               </a>
             </li>
             <li>
-              <a class="social-item" href="#" aria-label="Фейсбук">
-                <span class="visually-hidden">Фейсбук</span>
+              <a class="social-item" href="#">
                 <svg role="img" aria-label="Логотип Фейсбук" width="12" height="22" viewBox="0 0 12 22" fill="none">
                   <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
                 </svg>
               </a>
             </li>
             <li>
-              <a class="social-item" href="#" aria-label="Инстаграм">
-                <span class="visually-hidden">Инстаграм</span>
+              <a class="social-item" href="#">
                 <svg role="img" aria-label="Логотип Инстаграм" width="21" height="21" viewBox="0 0 21 21" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
@@ -403,8 +405,8 @@
     <button class="button-bookmark" type="button" name="button">В закладки</button>
   </div>
 
-  <script src="js/cards.js"></script>
-  <script src="js/basket.js"></script>
+  <script src="js/cards.min.js"></script>
+  <script src="js/basket.min.js"></script>
 </body>
 
 </html>
