@@ -23,7 +23,9 @@
   --basic-green-extra: #8ED78F;
   --basic-white-extra: #F3F7F9;
   --special-dark-blue: #212A3A;
+  --basic-special-blue: #405069;
   --special-borders: #E5E5E5;
+  --special-light-green:#367315;
 
   --filter-pink: #F7F3EC;
   --filter-scale: #D7DCDE;
@@ -35,6 +37,7 @@
   --modal-green: #518534;
 
   --nav-bleu: #3D546F;
+  --nav-grey: #EAEAEA;
 }
 
 /*Global*/
@@ -42,7 +45,7 @@
   min-width: 940px;
   margin: 0px;
   padding: 0px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
@@ -93,7 +96,7 @@
   transform: rotate(45deg);
   Top: 9px;
   right: -24px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
   text-align: center;
 }
@@ -157,54 +160,91 @@
   padding-left: 57px;
 }
 
-.search input {
+.search label{
+  position: relative;
+  width: 271px;
+}
+
+.search input{
   background-color: var(--basic-extra-dark);
   border: none;
-  width: 271px;
   height: 42px;
   margin: 0px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
   padding-left: 43px;
+  width: 271px;
 }
 
-.search .search-pic {
-  position: relative;
+
+.search input::-webkit-input-placeholder{
+  color: var(--basic-white);
+  opacity: 0.5;
 }
 
-.search-pic::before{
-  display: block;
+.search input:hover::-webkit-input-placeholder{
+  color: var(--basic-white);
+  opacity: 1;
+}
+
+.search input:focus::-webkit-input-placeholder{
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.search input::-moz-placeholder{
+  color: var(--basic-white);
+  opacity: 0.5;
+}
+.search input:hover::-moz-placeholder{
+  color: var(--basic-white);
+  opacity: 1;
+}
+
+.search input:focus::-moz-placeholder{
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+
+.search-pic{
+  display: inline-block;
+  vertical-align: middle;
   position: absolute;
   content: "";
   width:17px;
   height: 17px;
   background: url("../img/icons/icon-search.svg");
-  background-size: cover;
-  top:12px;
+  top:0px;
   left:20px;
   opacity: 0.5;
 }
 
-.search-pic:hover::before{
+.search-pic:hover{
   display: block;
+  vertical-align: middle;
   position: absolute;
   content: "";
   width:17px;
   height: 17px;
   background: url("../img/icons/icon-search.svg");
-  background-size: cover;
-  top:12px;
+  top:0px;
   left:20px;
   opacity: 1;
 }
 
-.search input:focus {
+.search input:focus{
   background-color: var(--basic-white);
   color: var(--basic-black);
   outline: none;
   border-color: var(--basic-white);
+}
+
+.search input:focus +.search-pic {
+  background-image: url("../img/icons/icon-search-red.svg");
+  opacity: 1;
 }
 
 
@@ -231,7 +271,7 @@
 }
 
 .page .link-order:link {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
@@ -251,11 +291,10 @@
   display: block;
   position: relative;
   padding-left: 43px;
-  padding-right: 24px;
+  padding-right: 38px;
   margin: 0px;
   padding-top: 9px;
   padding-bottom: 9px;
-  letter-spacing: 0.1px;
 }
 
 .page .marks:link::before {
@@ -287,7 +326,7 @@
 }
 
 .page .marks {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
@@ -296,7 +335,7 @@
 }
 
 .page .basket-black {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
@@ -314,10 +353,19 @@
   position: relative;
   padding-top: 9px;
   padding-bottom: 9px;
-  padding-left: 49px;
+  padding-left: 36px;
   padding-right: 26px;
-  letter-spacing: 0.1px;
 }
+
+.inner-page .basket {
+  position: relative;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 35px;
+  padding-right: 23px;
+}
+
+
 
 .page .basket:link::before {
   display: block;
@@ -326,7 +374,7 @@
   width: 15px;
   height: 15px;
   bottom: 15px;
-  left: 27px;
+  left: 13px;
   background-image: url("../img/icons/basket.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -340,7 +388,7 @@
   width: 15px;
   height: 15px;
   bottom: 15px;
-  left: 27px;
+  left: 13px;
   background-image: url("../img/icons/basket.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -366,7 +414,7 @@
 }
 
 .slogan p {
-  font-family: 'Cuprum', sans-serif ,Arial, ;
+  font-family: "Cuprum", "Arial", sans-serif ;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -376,13 +424,13 @@
 .header-contacts .phone-header {
   display: block;
   position: relative;
-  width: 157px;
+  width: 193px;
   padding-top: 4px;
   padding-bottom: 5px;
   padding-left: 72px;
-  padding-right: 36px;
-  border: 3px solid #FFFFFF;
-  font-family: 'Cuprum', Arial, sans-serif;
+  text-align: left;
+  border: 3px solid var(--basic-white);
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
@@ -408,7 +456,7 @@
 }
 
 .header-contacts p {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: var(--basic-dark);
@@ -418,7 +466,7 @@
 
 .down-header a {
   display: block;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 21px;
 }
@@ -485,7 +533,7 @@
 
 .login-link:link,
 .registration-link:link {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -504,7 +552,7 @@
 
 /*flex - navigatiob*/
 .main-nav {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
@@ -569,7 +617,7 @@
 }
 
 .features .features-title {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -677,7 +725,7 @@
 }
 
 .features .link {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-style: normal;
@@ -724,12 +772,12 @@
 }
 
  .slider-1 {
-  background-image: url("../img/perforators_slider(1).jpg");
+  background-image: url("../img/perforators-slider-1.jpg");
   width: 620px;
 }
 
 .slider-2 {
-  background-image: url("../img/perforators_slider(2).jpg");
+  background-image: url("../img/perforators-slider-2.jpg");
 }
 
 .slider-list {
@@ -754,7 +802,7 @@
   padding-left: 46px;
   padding-right: 46px;
   font-weight: normal;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
@@ -775,9 +823,9 @@
 
 .slider-controls {
   position: absolute;
-  width: 588px;
-  bottom: 105px;
-  left: 20px;
+  width: 30px;
+  bottom: 36px;
+  left: 295px;
   border: 0;
   padding: 0;
   display: flex;
@@ -786,15 +834,47 @@
 
 .slider-controls .buttons {
   cursor: pointer;
-  background-color: transparent;
+  background-color: var(--basic-white);
   border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
+
+.active-button-slider-first::after{
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--basic-red);
+  border-radius: 50%;
+  top:2px;
+  left: 3px;
+}
+
+.active-button-slider-second::after{
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--basic-red);
+  border-radius: 50%;
+  top:2px;
+  left: 21px;
+}
+
+
 
 .slider-controls .button-first::before {
   display: block;
+  position: absolute;
   content: "";
   width: 22px;
   height: 40px;
+  left:-271px;
+  bottom: 66px;
   background-image: url("../img/icons/icon-left.svg");
   background-repeat: no-repeat;
   background-color: transparent;
@@ -802,10 +882,12 @@
 
 .slider-controls .button-second::before {
   display: block;
+  position:absolute;
   content: "";
   width: 22px;
   height: 40px;
-  top: 150px;
+  right: -273px;
+  bottom: 66px;
   background-image: url("../img/icons/icon-left.svg");
   transform: rotate(180deg);
   background-repeat: no-repeat;
@@ -823,6 +905,7 @@
   width: 218px;
   min-height: 316px;
   margin: 0px;
+  border: 1px solid var(--nav-grey);
 }
 
 .products {
@@ -891,7 +974,7 @@
 }
 /*products-decoration*/
 .products-producers h2 {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -904,7 +987,7 @@
 }
 
 .products h3 {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -916,7 +999,7 @@
 .products-item a {
   display: block;
   position: relative;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   width: 89px;
   height: 29px;
   font-size: 17px;
@@ -946,7 +1029,7 @@
 
 .products-item span {
   position: relative;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -959,7 +1042,7 @@
 .products-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(-nav-grey);
 }
 
 .products-item h3 {
@@ -1015,7 +1098,7 @@
   transform: rotate(45deg);
   Top: 9px;
   right: -26px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
   text-align: center;
 }
@@ -1026,7 +1109,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 67px;
-  margin-bottom: 20px;
   background-color: var(--basic-light-pink);
   align-items: center;
   margin-left: 0px;
@@ -1040,7 +1122,7 @@
 }
 
 .link {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
   text-align: center;
   font-size: 14px;
@@ -1059,8 +1141,8 @@
   padding-bottom: 9px;
   width: 192px;
   margin-right: 19px;
-  margin-top: 25px;
-  margin-bottom: 26px;
+  margin-top: 26px;
+  margin-bottom: 28px;
   align-items: center;
   color: var(--basic-white);
 }
@@ -1089,9 +1171,9 @@
   display: grid;
   grid-template-columns: 220px 220px 220px 220px;
   grid-column-gap: 20px;
-  grid-row-gap: 14px;
+  grid-row-gap: 13px;
   width: 940px;
-  margin-top: 20px;
+  margin-top: 18px;
   margin-bottom: 60px;
 }
 
@@ -1108,7 +1190,7 @@
 }
 
 .services h2 {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -1124,7 +1206,7 @@
 }
 
 .services p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin-top: 25px;
@@ -1132,7 +1214,7 @@
 }
 
 .slider-services h2 {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -1143,7 +1225,7 @@
 
 .slider-services p,
 .services .slider-list-services p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
@@ -1169,7 +1251,7 @@
 }
 
 .slider-controls-services {
-  align-self: flex-end;
+  align-self: flex-start;
   margin-left: 0px;
   margin-bottom: 99px;
   margin-right: 80px;
@@ -1208,7 +1290,7 @@
   height: 261px;
   left: 150px;
   top: 20px;
-  background-image: url("../img/delivery_slider.png")
+  background-image: url("../img/delivery-slider.png")
 }
 
 .slider-item-2 {
@@ -1238,12 +1320,12 @@
   height: 285px;
   left: 160px;
   top: -3px;
-  background-image: url("../img/credit_slider.png")
+  background-image: url("../img/credit-slider.png")
 }
 
 .slider-item-3 a {
   position: absolute;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1260,13 +1342,29 @@
 .slider-controls-services .button {
   display: block;
   width: 240px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   background-color: var(--basic-dark);
   color: var(--basic-white);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-special-blue);
+  padding-top: 14px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  border: none;
+  letter-spacing: 0.5px;
+}
+.slider-controls-services .button:hover {
+  display: block;
+  width: 240px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  background-color: var(--basic-extra-dark);
+  color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-special-blue);
   padding-top: 14px;
   padding-bottom: 18px;
   padding-left: 22px;
@@ -1284,10 +1382,10 @@
 
  .current-info-btn {
   display: block;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   background-color: var(--basic-white);
   color: var(--basic-dark);
-  box-shadow: 0px 1px 0px #FFFFFF;
+  box-shadow: 0px 1px 0px var(--basic-white);
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -1298,6 +1396,7 @@
   letter-spacing: 0.5px;
   width: 240px;
 }
+
 
 /*company-review*/
 .index-columns {
@@ -1316,7 +1415,7 @@
   background-color: var(--basic-white);
   width: 460px;
   margin-right: 166px;
-  margin-bottom: 68px;
+  margin-bottom: 69px;
   margin-top: 69px;
 }
 
@@ -1326,7 +1425,7 @@
   line-height: 30px;
   text-transform: uppercase;
   margin-top: 0px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
   font-style: normal;
   font-weight: normal;
@@ -1335,7 +1434,7 @@
 }
 
 .company-info p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 0;
@@ -1374,7 +1473,7 @@
 
 .link-info {
   display: block;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
   font-weight: normal;
   font-size: 14px;
@@ -1393,7 +1492,7 @@
   margin-top: 69px;
 }
 .contacts p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   padding-bottom: 22px;
@@ -1401,7 +1500,7 @@
 }
 
 .company-info .company-item {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
@@ -1424,12 +1523,14 @@
   padding-left: 13px;
 }
 
-.contacts button {
-  font-family: 'Cuprum', Arial, sans-serif;
+.contacts .button-contacts {
+  display: block;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
   color: var(--basic-white);
+  text-align: center;
   background-color: var(--basic-red);
   text-transform: uppercase;
   padding-top: 11px;
@@ -1439,6 +1540,7 @@
   margin-right: 0px;
   margin-left: 13px;
   border: none;
+  cursor: pointer;
 }
 
 /*footer*/
@@ -1540,7 +1642,7 @@
 
 .upper-footer p,
 .upper-footer .phone-footer {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -1573,7 +1675,7 @@
 }
 
 .down-footer p {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -1658,16 +1760,6 @@
   text-decoration: none;
 }
 
-/*catalog bookmarks*/
-.inner-page .marks{
-  padding-right: 26px;
-}
-
-.inner-page .basket{
-  padding-right: 21px;
-}
-
-
 /* Grid for catalog */
 .catalog-wrapper {
   display: grid;
@@ -1718,7 +1810,7 @@
   list-style: none;
   margin: 0px;
   padding: 0px;
-  margin-bottom: 45px;
+  margin-bottom: 47px;
   display: grid;
   grid-template-columns: 220px 220px 220px;
   grid-column-gap: 20px;
@@ -1728,10 +1820,6 @@
 
 /*FILTER DECORATION*/
 
-.producers legend{
-  margin-top: 60px;
-}
-
 /*SORT*/
 .sort {
   display: flex;
@@ -1739,7 +1827,7 @@
   margin-left: 20px;
   font-size: 13px;
   line-height: 18px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   color:var(--basic-black);
   background-color: var(--filter-pink);
@@ -1749,7 +1837,7 @@
 .sort p{
   font-size: 13px;
   line-height: 18px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   color:var(--basic-black);
   margin-top: 0px;
@@ -1827,15 +1915,20 @@
   height: 0;
   text-decoration: none;
   border: 5px solid transparent;
-  border-top: 10px solid var(--basic-super-grey);
+  border-top: 10px solid var(--basic-red);
   transform: rotate(180deg);
   margin-left: 47px;
   margin-top:10px;
   margin-right: 22px;
 }
 
+
 .trg:hover{
   border-top: 10px solid var(--basic-black);
+}
+
+.trg-up:hover{
+  border-top: 10px solid var(--basic-red);
 }
 
 .trg:active{
@@ -1852,7 +1945,7 @@
 }
 
 .filter-option {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   padding-left: 35px;
   font-size: 15px;
   line-height: 19px;
@@ -1861,7 +1954,7 @@
 }
 
 .filter legend {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -1884,7 +1977,8 @@
   user-select: none;
 }
 /*квадратный чебоксы вставить галочки**/
-.filter-input-checkbox+label::before {
+.filter-input-checkbox+label::after{
+  display: block;
   content: "";
   position: absolute;
   left: -35px;
@@ -1895,7 +1989,8 @@
   border-radius: 10%;
 }
 
-.filter-input-checkbox+label:hover::before {
+.filter-input-checkbox+label:hover::after {
+  display: block;
   content: "";
   position: absolute;
   left: -35px;
@@ -1907,16 +2002,41 @@
 }
 
 
+.filter-input-checkbox:checked+label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 27px;
+  height: 27px;
+  background-image: url("../img/icons/checkbox-on.svg");
+  background-repeat: no-repeat;
+  border-radius: 10%;
+}
+
 .filter-input-checkbox:checked+label::after {
   content: "";
   display: block;
   position: absolute;
-  left: -30px;
+  left: -35px;
   top: -3px;
-  width: 23px;
-  height: 22px;
-  background-image: url("../img/icons/click.svg");
+  width: 0px;
+  height: 0px;
+  border: 0px;
   background-repeat: no-repeat;
+  border-radius: 10%;
+}
+
+.filter-input-checkbox:checked+label:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 27px;
+  height: 27px;
+  background-image:  url("../img/icons/checkbox-on-hover.svg");
   border-radius: 10%;
 }
 
@@ -1924,11 +2044,12 @@
   content: "";
   display: block;
   position: absolute;
-  left: -30px;
+  left: -35px;
   top: -3px;
   width: 23px;
-  height: 22px;
-  background-image: url("../img/icons/click.svg");
+  height: 23px;
+  border: 0px;
+  background-repeat: no-repeat;
   border-radius: 10%;
 }
 /* круглые чебоксы вставить галочки**/
@@ -1942,6 +2063,24 @@
   opacity: 0.4;
 }
 
+
+.filter-input-checkbox:checked:disabled + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 27px;
+  height: 27px;
+  border-radius: 10
+  background-image: url("..img/icons/checkbox-on-disabled.svg");
+}
+
+.filter-input-checkbox:checked:disabled + label::after{
+  border: 0px;
+}
+
+
 .filter-input-radio:disabled + label::before{
   color: var(--filter-grey);
   opacity: 0.4;
@@ -1952,10 +2091,7 @@
   opacity: 0.4;
 }
 
-.filter .energy{
-  margin-top: 23px;
-  margin-bottom: 19px;
-}
+
 
 .filter-input-radio + label::before {
   content: "";
@@ -2004,11 +2140,11 @@
 
 
 .filter-button {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   width: 220px;
   font-size: 13px;
   line-height: 18px;
-  border: 1px solid #E5E5E5;
+  border: 1px solid var(--special-borders);
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: var(--basic-white);
@@ -2022,15 +2158,15 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--nav-grey);
 }
 
-.inner-page .perforators-item h3 {
+.perforators-item h3 {
   order: 1;
 }
 
-.inner-page .perforators-item span,
-.inner-page .perforators-item a {
+.perforators-item span,
+.inner-page .button-perf {
   order: 2;
 }
 
@@ -2039,7 +2175,8 @@
 }
 
 /*PERFORATORS-decoration*/
-.inner-page .perforators-item h3 {
+
+.perforators-item h3 {
   display: block;
   display: flex;
   width: 170px;
@@ -2050,8 +2187,8 @@
   text-align: center;
 }
 
-.inner-page .perforators-item h3 {
-  font-family: 'PT Sans', Arial, sans-serif;
+.perforators-item h3 {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -2069,7 +2206,7 @@
   background-color: var(--basic-white);
 }
 
-.inner-page .perforators-item div {
+.perforators-item div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2077,10 +2214,15 @@
   height: 164px;
 }
 
-.inner-page .perforators-item a {
+.perforators-item .no-price{
+  margin-top: 41px;
+}
+
+
+.perforators-item .button-perf {
   display: block;
   position: relative;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   width: 121px;
   height: 29px;
   font-size: 17px;
@@ -2094,7 +2236,7 @@
   text-align: center;
 }
 
-.inner-page .perforators-item a::before {
+.perforators-item .button-perf::before {
   content: "";
   height: 0;
   width: 0;
@@ -2107,9 +2249,13 @@
   transform: rotate(90deg);
 }
 
-.inner-page .perforators-item span {
+.button-perf:-moz-focusring{
+  outline:var(--basic-black) solid 3px;
+}
+
+.perforators-item span {
   position: relative;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -2119,7 +2265,7 @@
   text-align: center;
 }
 
-.inner-page .perforators-item span {
+.perforators-item span {
   margin-top: 9px;
   margin-bottom: 14px;
 }
@@ -2130,7 +2276,7 @@
   position: relative;
   background-color: var(--basic-white);
   color: var(--basic-black);
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 21px;
   line-height: 21px;
@@ -2147,7 +2293,7 @@
   width: 20px;
   height: 18px;
   left: 17px;
-  background-image: url("../img/icons/icon-user (1).svg");
+  background-image: url("../img/icons/icon-user-1.svg");
 }
 
 .inner-page .account:hover::before {
@@ -2168,7 +2314,7 @@
   height: 18px;
   left: 17px;
   color:  rgba(197, 197, 197, 1);
-  background-image: url("../img/icons/icon-user (1).svg");
+  background-image: url("../img/icons/icon-user-1.svg");
 }
 
 .inner-page .account:active{
@@ -2220,7 +2366,7 @@ background-image: url("../img/icons/icon-logout-hover.svg");
 
 .user-nav .orders-1,
 .user-nav .log-in {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -2293,7 +2439,7 @@ background-image: url("../img/icons/icon-logout-hover.svg");
   position: absolute;
   content: "";
   width: 20px;
-  background-color: linear-gradient(0deg, #32425C, #32425C), #FFFFFF;
+  background-color: linear-gradient(0deg, var(--basic-dark), var(--basic-dark)), var(--basic-white);
 }
 
 .catalog-nav,
@@ -2303,7 +2449,7 @@ background-image: url("../img/icons/icon-logout-hover.svg");
 }
 
 .catalog-nav a {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2319,7 +2465,7 @@ background-image: url("../img/icons/icon-logout-hover.svg");
   font-size: 30px;
   padding: 30px;
   line-height: 30px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
@@ -2357,7 +2503,7 @@ background-image: url("../img/icons/icon-logout-hover.svg");
   margin-right: 42px;
   padding-top: 18px;
   padding-bottom: 20px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2383,7 +2529,7 @@ background-image: url("../img/icons/icon-logout-hover.svg");
 }
 
 .filter h2 {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   padding-top: 10px;
@@ -2415,7 +2561,7 @@ background-image: url("../img/icons/icon-logout-hover.svg");
 }
 
 .filter-item legend {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 17px;
@@ -2473,13 +2619,20 @@ background-image: url("../img/icons/icon-logout-hover.svg");
 .price-controls {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 42px;
+  margin-bottom: 26px;
   font-size: 16px;
   line-height: 18px;
 }
 
+.filter .producers{
+  margin-top: 14px;
+}
+
+.filter .filter-item{
+  border-bottom: 1px solid var(--basic-grey);
+}
 .price-controls label {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
@@ -2509,31 +2662,18 @@ background-image: url("../img/icons/icon-logout-hover.svg");
 .max-price input{
   margin-left: 5px;
 }
-.filter .producers{
-  position: relative;
-}
-/* ПААААААЛОЧКА*/
 
-.filter .producers::after{
-  display: block;
-  position: absolute;
-  content: "";
-  width:220px;
-  height: 1px;
-  bottom: -5px;
-  background-color: var(--basic-grey);
-  opacity: 0.6;
+.filter .energy{
+  margin-top: 17px;
+  margin-bottom: 18px;
 }
 
-.filter .producers::before{
-  display: block;
-  position: absolute;
-  content: "";
-  width:220px;
-  top:-18px;
-  height: 1px;
-  background-color: var(--basic-grey);
-  opacity: 0.6;
+.filter .producers {
+  border-bottom: 1px solid var(--basic-grey);
+}
+
+.producers ul{
+  margin-bottom: 7px;
 }
 /*PERFORETORS_CATALOG*/
 .perforators-info-wrapper{
@@ -2549,7 +2689,7 @@ h1 {
 }
 
 .perforators-list h3 {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -2557,7 +2697,7 @@ h1 {
 }
 
 .perforators-list p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -2573,23 +2713,36 @@ h1 {
   margin-bottom: 20px;
   list-style: none;
 }
-
+.numeration-list .numeration-item{
+  margin-right: 10px;
+}
 .numeration-list .next {
-  width: 108px;
+  width: 106px;
   padding-left: 32px;
   text-align: center;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  border: 1px solid var(--special-borders);
+}
+
+.numeration-list .next:hover {
+  width: 106px;
+  border: 1px solid var(--basic-super-grey);
+}
+
+.numeration-list .next:active {
+  width: 106px;
+  border: 1px solid var(--basic-red);
 }
 
 .numeration-list a {
   display: block;
-  width: 38px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  width: 36px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-align: center;
@@ -2597,23 +2750,47 @@ h1 {
 }
 
 .numeration-item {
+  width: 36px;
   margin-right: 8px;
   border: 1px solid var(--special-borders);
   border-radius: 2px;
 }
 
+.numeration-item:hover {
+  width: 36px;
+  border: 1px solid var(--basic-super-grey);
+
+}
 .numeration-item:active {
+  width: 36px;
   border: 1px solid var(--basic-red);
 }
 
-.numeration-list .current {
+
+.numeration-list .current-number{
   background-color: var(--basic-red);
   color: var(--basic-white);
 }
 
+.numeration-list:first-child:link{
+  width: 40px;
+  border: none;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.numeration-list:first-child:hover{
+  width: 40px;
+  border: none;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border: 1px solid var(--basic-red);
+}
+
 .perforators-info-wrapper h2 {
   display: inline-block;
-  font-family: 'Cuprum', Arial, sans-serif;
+  vertical-align: top;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -2624,7 +2801,7 @@ h1 {
 }
 
 .perforators-info p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
@@ -2649,7 +2826,7 @@ h1 {
   transform: rotate(45deg);
   Top: 9px;
   right: -26px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
   text-align: center;
 }
@@ -2761,7 +2938,7 @@ display: block;
   margin-bottom: 11px;
   font-size: 18px;
   line-height: 24px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color:var(--bacis-black);
   width: 117px;
   margin-right: 0px;
@@ -2787,7 +2964,7 @@ display: block;
 
 .modal-contacts input,
 .modal-contacts textarea {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-grey);
@@ -2815,7 +2992,7 @@ display: block;
 }
 
 .color{
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
@@ -2834,7 +3011,7 @@ display: block;
 .button-basket a {
   background-color: var(--basic-red);
   color: var(--basic-white);
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2867,7 +3044,7 @@ display: block;
 .modal-basket p {
   display: block;
   position: relative;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -2894,6 +3071,8 @@ display: block;
 }
 
 .shadow{
+  width: 212px;
+  height: 310px;
   box-shadow:  0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -2920,7 +3099,7 @@ display: block;
   padding-bottom: 10px;
   padding-right: 12px;
   padding-left: 25px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   background-color: var(--basic-green);
   color: var(--basic-white);
   font-size: 14px;
@@ -2930,7 +3109,7 @@ display: block;
   margin-top: 20px;
   margin-bottom: 0px;
   border:none;
-  box-shadow: inset 0px -3px 0px 0px #367315;
+  box-shadow: inset 0px -3px 0px 0px var(--special-light-green);
   border-radius: 2px;
   outline: none;
 }
@@ -2962,7 +3141,7 @@ display: block;
   padding-right: 30px;
   padding-left: 30px;
   border: 3px solid var(--basic-green);
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   background-color: var(--basic-white);
   color: var(--basic-dark);
   font-size: 14px;
